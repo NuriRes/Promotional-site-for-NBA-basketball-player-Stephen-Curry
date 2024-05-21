@@ -1,0 +1,138 @@
+#myCarousel .carousel-item img {
+    width: 800px;
+    height: 750px;
+    object-fit: cover;}
+   /* Özelleştirmeler */
+   .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .about-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .about-image {
+    flex: 1;
+    margin-right: 20px;
+  }
+
+
+  .about-description {
+    flex: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .about-section {
+      flex-direction: column;
+    }
+  
+    .about-image img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .footer {
+    background-color: #222;
+    color: #fff;
+    padding: 50px 0;
+  }
+  .footer ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .footer ul li {
+    margin-bottom: 15px;
+  }
+  .footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .footer ul li a:hover {
+    color: #007bff;
+  }
+  .footer-heading {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  .social-icons a {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+  }
+  .social-icons a:hover {
+    color: #007bff;
+  }
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .map-container {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-top: 56.25%; /* Aspect ratio 16:9 */
+  }
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .address-text {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  .description-text {
+    font-size: 16px;
+    color: #ffffff;
+  }
+  .container {
+  text-align: center; /* Galeri başlığını ortala */
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-item {
+  margin: 10px;
+  width: 300px; /* Sabit genişlik */
+  height: 400px; /* Sabit yükseklik */
+  overflow: hidden; /* Taşma durumunda resmi kırp */
+}
+
+.gallery-item img {
+  width: 100%; /* Resmin genişliğini tam olarak ayarlar */
+  height: 100%; /* Resmin yüksekliğini tam olarak ayarlar */
+  object-fit: cover; /* Resmin kesilmeden tam olarak sığmasını sağlar */
+}
+/* Telefon ekranlarında slider içindeki yazıların görünmesini sağlamak için */
+

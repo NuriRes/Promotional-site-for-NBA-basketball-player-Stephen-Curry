@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="Resimler/WhatsApp_Image_2024-05-04_at_12.23.36-removebg-preview - Kopya.png" type="image/png">
+    <title>www.StephenCurry</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+<!--style etiketi-->
+<style>
+  #myCarousel .carousel-item img {
+    width: 500px;
+    height: 600px;
+    object-fit: cover;}
+  
+   .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .about-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .about-image {
+    flex: 1;
+    margin-right: 20px;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .about-description {
+    flex: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .about-image, .about-description {
+      flex: none;
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .footer {
+    background-color: #222;
+    color: #fff;
+    padding: 50px 0;
+  }
+  .footer ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .footer ul li {
+    margin-bottom: 15px;
+  }
+  .footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .footer ul li a:hover {
+    color: #007bff;
+  }
+  .footer-heading {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  .social-icons a {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+  }
+  .social-icons a:hover {
+    color: #007bff;
+  }
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .map-container {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-top: 56.25%; /* Aspect ratio 16:9 */
+  }
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .address-text {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  .description-text {
+    font-size: 16px;
+    color: #ffffff;
+  }
+  .container {
+  text-align: center; /* Galeri başlığını ortala */
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-item {
+  margin: 10px;
+  width: 300px; /* Sabit genişlik */
+  height: 400px; /* Sabit yükseklik */
+  overflow: hidden; /* Taşma durumunda resmi kırp */
+}
+
+.gallery-item img {
+  width: 100%; /* Resmin genişliğini tam olarak ayarlar */
+  height: 100%; /* Resmin yüksekliğini tam olarak ayarlar */
+  object-fit: cover; /* Resmin kesilmeden tam olarak sığmasını sağlar */
+}
+/* Telefon ekranlarında slider içindeki yazıların görünmesini sağlamak için */
+
+
+  .carousel {
+      margin-bottom: 10px; /* Slider'ın altındaki boşluğu ayarlamak için */
+  }
+  
+  /* Telefon ekranlarında slider içindeki yazıların görünmesini sağlamak için */
+  @media (max-width: 767px) {
+      .carousel-caption {
+          display: block !important;
+          position: static !important;
+          width: auto !important;
+          margin-top: -10px; /* Yazıyı slider içinde biraz daha yukarı taşımak için */
+          margin-bottom: 0; /* Yazının alt boşluğunu ayarlamak için */
+          text-align: center; /* Yazıların ortalanması */
+          padding-top: 0; /* Yazının slider içindeki pozisyonunu ayarlamak için */
+      }
+  }
+    .carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Yazıların üzerinde gölgeli bir arka plan sağlamak için */
+    color: white; /* Yazı rengi */
+    padding: 20px; /* Yazıların kenarlardan içeriye olan boşluğu */
+  }
+
+  </style>
+  
+  <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="Resimler/galeri/download.png" alt="Logo" style="width: 100px; height: auto;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarNav">
+          <div class="navbar-nav">
+            <a class="nav-link" aria-current="page" href="index.html">Ana Sayfa</a>
+            <a class="nav-link" href="hakkımızda.html">Hakkımızda</a>
+            <a class="nav-link active" href="Galeri.html">Galeri</a>
+            <div class="nav-item dropdown">
+              </ul>
+            </div>
+          </div>
+          <span class="navbar-text text-center text-lg-start" style="font-family: Arial, sans-serif; font-size: 14px; font-style: italic; font-weight: bold; line-height: 20px; max-width: 200px;"></span>
+          <form class="d-flex">
+            <input id="searchInput" class="form-control me-2" type="search" placeholder="Arama" aria-label="Search">
+            <button class="btn btn-outline-success" onclick="search()" type="button">Ara</button>
+          </form>
+          
+          <div id="searchResults"></div>
+        </div>
+      </div>
+    </nav>
+    <!--Navbar-->
+
+
+
+
+<!-- Page Content -->
+<div class="container">
+
+  <h1 class="fw-light text-center text-lg-start mt-4 mb-0"></h1>
+
+  <hr class="mt-2 mb-5">
+
+  <div class="row text-center text-lg-start">
+
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="Resimler/13.jpg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="Resimler/2.jpg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="Resimler/3.jpg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="Resimler/4.jpg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="Resimler/5.jpg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="Resimler/6.jpg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="Resimler/7.jpg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="Resimler/8.jpg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="Resimler/9.jpg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="Resimler/10.jpg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="Resimler/11.jpg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="Resimler/12.webp" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="Resimler/13.jpg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="Resimler/14.jpg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="Resimler/15.jpg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="Resimler/16.jpg" alt="">
+      </a>
+    </div>
+    
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+   
+      </a>
+    </div>
+  </div>
+
+</div>
+<!--card 2-->
+
+
+</div>
+<!--footer web sitesi sonu-->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h3 class="footer-heading">About Us</h3>
+        <p>Sitenin Tasarımcısı Web Tasarım ve Kodlama Bölümü Öğrencisi Nuri Kaplan'a Aittir Resmi Site Değildir Proje Ödevi İçindir</p>
+      </div>
+      <div class="col-md-4">
+        <h3 class="footer-heading">Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="Hakkımızda.html">Hakkımızda</a></li>
+          <li><a href="Galeri.html">Galeri</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h3 class="footer-heading">Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/StephenCurryOfficial/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/StephenCurry30" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/stephencurry30/" target="_blank"><i class="fab fa-instagram"></i></a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--footer bitiş-->
+
+<script>
+  function search() {
+    var input, filter, content, i, txtValue, result;
+    input = document.getElementById('searchInput');
+    filter = input.value.toUpperCase();
+    content = {
+      "Ana Sayfa": "index.html",
+      "Hakkımızda": "hakkımızda.html",
+      "Galeri": "galeri.html",
+      "Golden State": "golden-state.html",
+      "Oyun Tarzı ve Etkisi": "oyun-tarzı-ve-etkisi.html",
+      "NBA Kariyeri": "nba-kariyeri.html",
+      "Hakkında": "hakkında.html",
+      "Adres": "adres.html",
+      "Açıklama": "açıklama.html"
+    };
+  
+    for (i = 0; i < Object.keys(content).length; i++) {
+      txtValue = Object.keys(content)[i].toUpperCase();
+      if (txtValue.includes(filter)) {
+        result = content[Object.keys(content)[i]];
+        window.location.href = result;
+        return; 
+      }
+    }
+  
+   
+    alert("Arama sonucu bulunamadı.");
+  }
+  
+  
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
